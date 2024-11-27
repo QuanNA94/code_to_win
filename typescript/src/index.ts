@@ -1,5 +1,13 @@
 
 const num = 8;
+const value = undefined;
+const username = "quan";
+const password = "Kakalos";
+const user = { isAdmin: false, isEditor: true, isViewer: true };
+const userProfile1 = { name: "Quan", age: 17, role: "admin" };
+const userProfile2 = { name: " ", age: 30, role: "viewer" };
+const userProfile3 = { name: "Quan", age: 30, role: "editor" };
+
 
 // --- Bài 1: Kiểm tra tính hợp lệ của một số ---
 // Viết một hàm kiểm tra xem một số có nằm trong khoảng [10, 20] hay không.
@@ -19,7 +27,6 @@ function checkedValue(value: string | number | undefined | null) {
     return value === null || value === undefined ? dafaultValue : value
 }
 
-const value = undefined
 
 console.log("check value null | undefined return defaultValue", checkedValue(value))
 
@@ -38,8 +45,6 @@ function validateUser(username: string | undefined | null, password: string) {
     return "logging fail"
 }
 
-const username = "quan"
-const password = "Kakalos"
 
 console.log("check user logging: ", validateUser(username, password))
 
@@ -92,7 +97,6 @@ function hasAccess(user: { isAdmin: boolean, isEditor: boolean, isViewer: boolea
     }
 }
 
-const user = { isAdmin: false, isEditor: true, isViewer: true };
 
 console.log(hasAccess(user)); // "Access granted"
 console.log(hasAccess({ isAdmin: false, isEditor: false, isViewer: false })); // "Access denied"
@@ -114,8 +118,45 @@ console.log("check number satisfy conditions:", validateNumber(num))
 // Nếu chỉ isPaid là true, trả về "Pending delivery".
 // Nếu không, trả về "Pending payment".
 
+function checkedOrderStatus(isPaid: boolean, isDelivered: boolean) {
+    if (isPaid && isDelivered) {
+        return "Order complete"
+    } else if (isPaid) {
+        return "Pending delivery"
+    } else {
+        return "Pending payment"
+    }
+}
+
+console.log(checkedOrderStatus(true, true));
+console.log(checkedOrderStatus(true, false));
+console.log(checkedOrderStatus(false, false));
+
 // Bài 10: Điều kiện lồng ghép
 // Viết một hàm kiểm tra tính hợp lệ của một đối tượng với các điều kiện phức tạp:
 // Có name không rỗng.
 // Có age từ 18 đến 60.
 // Là admin hoặc editor.
+
+function validateProfileUser(userProfile: { name: string, age: number, role: string }) {
+
+    const { name, age, role } = userProfile
+
+    if (name.trim() === "") {
+        return "Name cannot null"
+    }
+
+    if (age < 18 || age > 60) {
+        return "Having age from 18 to 60"
+    }
+    if (role !== "admin" && role !== "editor") {
+        return "role must be admin or editor";
+    }
+
+    return "valid user"
+}
+
+
+console.log("case 1: ", validateProfileUser(userProfile1))
+console.log("case 2: ", validateProfileUser(userProfile2))
+console.log("case 3: ", validateProfileUser(userProfile3))

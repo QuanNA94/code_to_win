@@ -1,5 +1,12 @@
 "use strict";
 const num = 8;
+const value = undefined;
+const username = "quan";
+const password = "Kakalos";
+const user = { isAdmin: false, isEditor: true, isViewer: true };
+const userProfile1 = { name: "Quan", age: 17, role: "admin" };
+const userProfile2 = { name: " ", age: 30, role: "viewer" };
+const userProfile3 = { name: "Quan", age: 30, role: "editor" };
 // --- Bài 1: Kiểm tra tính hợp lệ của một số ---
 // Viết một hàm kiểm tra xem một số có nằm trong khoảng [10, 20] hay không.
 function checkedNumber(num) {
@@ -12,7 +19,6 @@ function checkedValue(value) {
     let dafaultValue = 13;
     return value === null || value === undefined ? dafaultValue : value;
 }
-const value = undefined;
 console.log("check value null | undefined return defaultValue", checkedValue(value));
 // --- Bài 3: Kiểm tra đăng nhập ---
 // Viết một hàm kiểm tra xem một người dùng có thể đăng nhập không dựa vào 2 điều kiện:
@@ -28,8 +34,6 @@ function validateUser(username, password) {
     }
     return "logging fail";
 }
-const username = "quan";
-const password = "Kakalos";
 console.log("check user logging: ", validateUser(username, password));
 // --- Bài 4: Kiểm tra nhiều điều kiện ---
 // Viết một hàm kiểm tra xem một số có là số chẵn hoặc nằm trong khoảng [50, 100] hay không.
@@ -67,7 +71,6 @@ function hasAccess(user) {
         return false;
     }
 }
-const user = { isAdmin: false, isEditor: true, isViewer: true };
 console.log(hasAccess(user)); // "Access granted"
 console.log(hasAccess({ isAdmin: false, isEditor: false, isViewer: false })); // "Access denied"
 // Bài 8: Toán tử lồng nhau
@@ -83,8 +86,38 @@ console.log("check number satisfy conditions:", validateNumber(num));
 // Nếu isPaid là true và isDelivered là true, trả về "Order complete".
 // Nếu chỉ isPaid là true, trả về "Pending delivery".
 // Nếu không, trả về "Pending payment".
+function checkedOrderStatus(isPaid, isDelivered) {
+    if (isPaid && isDelivered) {
+        return "Order complete";
+    }
+    else if (isPaid) {
+        return "Pending delivery";
+    }
+    else {
+        return "Pending payment";
+    }
+}
+console.log(checkedOrderStatus(true, true));
+console.log(checkedOrderStatus(true, false));
+console.log(checkedOrderStatus(false, false));
 // Bài 10: Điều kiện lồng ghép
 // Viết một hàm kiểm tra tính hợp lệ của một đối tượng với các điều kiện phức tạp:
 // Có name không rỗng.
 // Có age từ 18 đến 60.
 // Là admin hoặc editor.
+function validateProfileUser(userProfile) {
+    const { name, age, role } = userProfile;
+    if (name.trim() === "") {
+        return "Name cannot null";
+    }
+    if (age < 18 || age > 60) {
+        return "Having age from 18 to 60";
+    }
+    if (role !== "admin" && role !== "editor") {
+        return "role must be admin or editor";
+    }
+    return "valid user";
+}
+console.log("case 1: ", validateProfileUser(userProfile1));
+console.log("case 2: ", validateProfileUser(userProfile2));
+console.log("case 3: ", validateProfileUser(userProfile3));
