@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "dev": "concurrently -k -n COMPILER,NODEMON -c yellow,blue \"tsc -w\" \"nodemon -w dist -q dist/index.js\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "nodemon": "^3.1.7",
+    "typescript": "^5.7.2"
+  }
+}
