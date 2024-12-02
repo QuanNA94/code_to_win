@@ -4,3 +4,12 @@
 
 // Nếu isPremium là true, thì membershipId không được rỗng.
 // Nếu isPremium là false, thì không cần kiểm tra membershipId.
+
+function checkValidObject(isPremium: boolean) {
+    const membershipId = "123"
+    return (isPremium) ? membershipId.length > 0 : true
+
+}
+
+console.log("check valid object: ", checkValidObject(true))
+console.log("check valid object: ", checkValidObject(false))
