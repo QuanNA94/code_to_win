@@ -10,9 +10,11 @@
 // Rút gọn hàm
 
 function validateUser(username: string | undefined | null, password: string) {
-    const isValidValue = username ?? ""
-
-    return (isValidValue && password.length >= 6) ? "login success" : "login fail"
+    const isValidValue = username === null || username === "" // isValidValue: ten bien = (toan tu/ phep gan) gia tri
+    // isValidValue: statement
+    // expression: username === null || username === "" - chua doan kiem tra trong do, 
+    // nhan bat ky kieu du lieu nao bao gom value nguyen thuy, obj, array, declare func
+    return isValidValue && password.length >= 6 ? "login success" : "login fail"
 }
 
 const username = null;
