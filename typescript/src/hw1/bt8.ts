@@ -3,8 +3,14 @@
 // Lớn hơn 0 và là số lẻ.
 // Hoặc là bội số của 10.
 
-function validateNumber(num: number) {
-    return (num > 0 && num % 2 !== 0) || num % 10 === 0;
+function validateNumber(num: number) : boolean {
+
+    const isPositiveAndOdd  = (num > 0 && num % 2 !== 0) 
+    const isMultipleOfTen = num % 10 === 0;
+
+    const isValid = isPositiveAndOdd || isMultipleOfTen
+
+    return isValid;
 }
 
-console.log("check number satisfy conditions:", validateNumber(10))
+console.log("check number satisfy conditions:", validateNumber(12))

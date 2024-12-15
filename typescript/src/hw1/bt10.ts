@@ -4,22 +4,28 @@
 // Có age từ 18 đến 60.
 // Là admin hoặc editor.
 
-function validateProfileUser(userProfile: { name: string, age: number, role: string }) {
+function validateProfileUser(userProfile: { name: string, age: number, role: string }) : string {
 
     const { name, age, role } = userProfile
 
-    if (name.trim() === "") {
-        return "Name cannot null"
+    const isValidName = name.trim() !== "";
+    const isValidAge = age >= 18 && age <= 60
+    const isValidRole = role === "admin" || role === "editor"
+
+
+    if (!isValidName) {
+        return "Name cannot null";
     }
 
-    if (age < 18 || age > 60) {
-        return "Having age from 18 to 60"
+    if (!isValidAge) {
+        return "Having age from 18 to 60";
     }
-    if (role !== "admin" && role !== "editor") {
+
+    if (!isValidRole) {
         return "role must be admin or editor";
     }
 
-    return "valid user"
+    return "valid user";
 }
 
 

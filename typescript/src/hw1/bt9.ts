@@ -6,9 +6,11 @@
 // Nếu chỉ isPaid là true, trả về "Pending delivery".
 // Nếu không, trả về "Pending payment".
 
-function checkedOrderStatus(isPaid: boolean, isDelivered: boolean) {
+function checkedOrderStatus(isPaid: boolean, isDelivered: boolean) : string {
 
-    return (isPaid && isDelivered) && "Oder complete" || isPaid && "Pending delivery" || "Pending payment"
+    const status =  (isPaid && isDelivered) && "Oder complete" || isPaid && "Pending delivery" || "Pending payment"
+
+    return status;
 }
 
 console.log(checkedOrderStatus(true, true));

@@ -15,7 +15,7 @@
     - nen tang (platform), moi truong(env) chay run-time 
     - bien dich (compile) ngon ngu JS thanh ma may (machine code)
     - 
-8. npm la gi ? (Node package manager) - default install with nodejs
+8. npm la gi ? (Node package manager) - default install with nodejs                             
     - tool tao va quan ly (install,remove, ...) cac thu vien nodejs | (registry)
     - npm len registy to find react package tren so dang ky neu co no se keo het toan bo src code cua react vao node_modules, neu khong co bao loi
 

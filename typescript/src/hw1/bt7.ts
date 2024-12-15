@@ -2,17 +2,15 @@
 // Cho một đối tượng người dùng với các quyền:
 // Viết một hàm kiểm tra xem người dùng có full quyền truy cập hay không.
 
-function hasAccess(user: { isAdmin: boolean, isEditor: boolean, isViewer: boolean }) {
-    const { isAdmin, isEditor, isViewer } = user
-
-    if (!user) return;
-
-    if (!isAdmin) {
-        if (isEditor && isViewer) {
-            return true
-        }
-        return false
+function hasAccess(user: { isAdmin: boolean, isEditor: boolean, isViewer: boolean }): string {
+    if (!user) {
+        return "Access denied";
     }
+
+    const { isAdmin, isEditor, isViewer } = user;
+    const hasPermission = isAdmin || (isEditor && isViewer) ? "Access granted" : "Access denied";
+
+    return hasPermission;
 }
 
 
