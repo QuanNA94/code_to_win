@@ -1,0 +1,43 @@
+1. Cấu trúc dữ liệu và giải thuật (chưa cần gấp)
+    - Cấu trúc dữ liệu và giải thuật là gì? Tại sao chúng quan trọng trong lập trình?
+    - Khi nào nên sử dụng từng loại cấu trúc dữ liệu (array, linked list, stack, queue, hash table, tree, graph, v.v.)?
+    - Các thuật toán sắp xếp phổ biến như Quick Sort, Merge Sort hoạt động như thế nào?
+    - Làm thế nào để đánh giá độ phức tạp của một thuật toán? (Big O Notation)
+    - Greedy, Divide and Conquer, và Dynamic Programming khác nhau như thế nào?
+
+2. Hyper Text Markup Language (HTML)
+    - HTML có thực sự không phải là ngôn ngữ lập trình? Vì sao?
+    - Sự khác biệt giữa các thẻ <div>, <section>, và <article> trong HTML là gì?
+    - HTML5 mang lại những cải tiến nào so với các phiên bản trước đó?
+
+3. Ngôn ngữ lập trình
+    - Làm thế nào để chọn ngôn ngữ lập trình phù hợp cho một dự án cụ thể?
+    - JavaScript khác gì so với TypeScript? (chưa rõ lắm)
+
+4. Library và Framework
+Library (ReactJS):
+    - Sự khác biệt giữa Library (ReactJS) và Framework (NextJS) là gì? (chưa rõ lắm)
+    - ReactJS hoạt động như thế nào dưới nền tảng? Khi nào nên sử dụng ReactJS?
+Framework (.NET, NestJS, NextJS):
+    - Khi nào nên sử dụng Framework thay vì Library?
+    - Lợi ích của việc sử dụng NextJS trong ReactJS là gì?
+
+5. NodeJS
+    - Tại sao không nên commit thư mục node_modules vào repository?
+
+6. package.json và package-lock.json
+    - file package.json và package-lock.json khác nhau như thế nào?
+    - Tại sao file package-lock.json lại quan trọng trong việc quản lý dependency?
+    - Có cần thiết commit package-lock.json vào repository không?
+
+7. Quy tắc viết code
+    - Khi nào nên sử dụng toán tử nullish coalescing (??) thay vì toán tử OR (||)?
+    - Tại sao cần kiểm tra giá trị không hợp lệ trước khi xử lý logic chính?
+
+8. Lỗi thường gặp
+    - Điều gì xảy ra khi quên không return giá trị từ một hàm trong JavaScript? 
+    
+9. Tối ưu hóa mã nguồn
+    - Làm thế nào để rút gọn hàm nhưng vẫn giữ được tính rõ ràng và dễ bảo trì?
+    - Khi nào nên ưu tiên(dễ đọc) hơn là tối ưu hiệu suất?
+    - Lợi ích của việc kiểm tra giá trị không hợp lệ đầu tiên trong hàm là gì?

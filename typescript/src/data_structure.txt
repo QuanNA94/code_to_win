@@ -1,0 +1,62 @@
+1. Cấu trúc dữ liệu và giải thuật là gì ?
+    1.1 Cấu trúc dữ liệu là gì?
+        - cách tổ chức và lưu trữ dữ liệu để có thể truy xuất và thao tác hiệu quả 
+
+        - cách đặc trưng của cấu trúc dữ liệu bao gồm: 
+            a. tính tuyến tính hoặc phi tuyến tính (Linear): 
+                - tính tuyến tính: Array, Linked List, (Stack) LIFO ,(Queue) FIFO
+                    - thường sử dụng trong tình huống mà phần tử được sắp xếp theo thứ tự
+                - tính phi tuyến tính (Non-Linear): 
+                    + Tree (Binary Search Tree, Heap, ..)
+                    + Graph 
+                    - không có cấu trúc phân cấp rõ ràng, các ptu có thể có nhiều ptu con hoặc cha.
+
+            b. Tính đồng nhất hoặc không đồng nhất:
+                - tính đồng nhất (Homogeneous):
+                - tính không đồng nhất (Non-Homogeneous):
+
+            c. Tính tĩnh hoặc động:
+                - tính động (Dynamic):
+                    + Đặc điểm: Kích thước không cố định, có thể thay đổi trong thời gian chạy chương trình.
+                    + Ưu điểm: tối ưu hóa bộ nhớ, linh hoạt trong việc thêm bớt phần tử. 
+                    + Ví dụ: Stack, Queue, Linked List 
+
+                - tính tĩnh (Static): 
+                    + Đặc điểm: Có kích thước và bộ nhớ cố định. 
+                    Số lượng phần tử được xác định trước và không thể thay đổi trong quá trình chạy chương trình.
+                    + Ưu điểm: truy cập phần tử cố định hơn do kích thước cố định.
+                    + Ex: Array 
+
+    1.2 Giải thuật là gì?
+
+        - (thuật toán) là tập hợp các bước cụ thể để giải quyết một bài toán.
+        - Phân loại giải thuật: 
+            + Giải thuật tìm kiếm và sắp xếp: 
+                - Search: 
+                    - Linear Search: 
+                    - Binary Search: 
+
+                - Sort: 
+                    - Bubble Sort:
+                    - Insertion Sort:
+                    - Quick Sort: 
+                    - Merge Sort:
+                        - Sắp xếp theo phương pháp (Devide and Conquer)
+            + Giải thuật Greedy
+            + Giải thuật Dynamic Programming:
+                - Giải quyết vấn đề phức tạp bằng cách chia nhỏ chúng thành các bài toán con đơn giản.
+                - Lưu trữ kết quả của các bài toán con.
+                - Sử dụng lại kết quả đã lưu.
+            + Giải thuật Devide and Conquer
+            + Giải thuật Backtracking 
+            + Giải thuật Graphic
+            + Giải thuật heuristic and metaheuristic
+
+            + Giải thuật Recursion: 
+                - Linear Recursion:
+                - Binary Recursion:
+                - Nested Recursion:
+                - Matual Recursion: 
+                - Backtracking: 
+
+        
